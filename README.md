@@ -1,8 +1,9 @@
 # Two-stage-multi-view-information-considering-3D-human-pose-estimation-network
 ---
-*Code will update later*
-We propose a 3D human pose estimation network that *considers the relevance of multi-view information*. By considering the homography, we transform the extracted 2D feature into 3D space. And we explore the *relevance of image feature between different camera views*, so that each view can use other view's information to complement itself, and fuse them to describe the one 3D space. Finally, we propose a two-stage 3D human pose estimation model, to gradually adjust the prediction results. In order to show the effectiveness, we conducted evaluation tests on two widely used data sets. 
-Keywords—3D human pose estimation, Multi-View Stereo, 3D feature extraction, neural networks, deep learning
+**Code will update later**
+
+We propose a 3D human pose estimation network that **considers the relevance of multi-view information**. By considering the homography, we transform the extracted 2D feature into 3D space. And we explore the **relevance of image feature between different camera views**, so that each view can use other view's information to complement itself, and fuse them to describe the one 3D space. Finally, we propose a two-stage 3D human pose estimation model, to gradually adjust the prediction results. In order to show the effectiveness, we conducted evaluation tests on two widely used data sets. 
+*Keywords—3D human pose estimation, Multi-View Stereo, 3D feature extraction, neural networks, deep learning*
 It is authored by **YU LIN LIU**.
 
 ### Table of Contents
@@ -48,13 +49,13 @@ python train.py
 ## Evaluation
 ---
 Evaluate the model on two dataset, get the testing data and run the code to saving the prediction result.
-- for Human3.6M, run saving_result_h36train.py
-- for TotalCapture, run saving_result_tc.py
+- for Human3.6M, run *saving_result_h36train.py*
+- for TotalCapture, *run saving_result_tc.py*
 * Note: before run the saving code, should load the setting(like model weight etc.), just check the ./parameter_setting/saving_result.yaml*
 - take the saving prediction result and run the evaluation code in ./eval_methods --> check the argparse setting to give something important(like path of prediction result and   
   eval result).
-  - for Human3.6M, run eval.py
-  - for TotalCapture, run eval_tc.py
+  - for Human3.6M, run *eval.py*
+  - for TotalCapture, run *eval_tc.py*
 
 * Note: the link of testing data [link](update later)*
 
