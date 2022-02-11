@@ -1,0 +1,60 @@
+pytorch:
+  gpus: '0' #gpu id we select for training  
+  output_path: '' 
+  log_path: './log/'
+  block: 'Pose_Net_train' #the main model we use , defined in the .{project_root}/model/main_network/
+  loss: 'L1'
+dataset:
+  name: 'human 3.6m'
+  root_dir : ''
+  train_image_set: 'train_h36m_multi.csv'
+  test_image_set: 'test_h36m_multi.csv'
+  val_image_set: 'val_h36m_multi.csv'
+  cam_num:
+  - 1
+  - 2
+  - 3
+  - 4  
+  cam_matrix_path: 'cam_param/cameras.h5'
+dataiter:
+    epoch: 25
+    batch_images_per_ctx: 4 #training samples in every iter
+    threads: 16
+    use_color_normalize: true
+    mean:
+    - 0.5 #- '0.485*255'
+    - 0.5 #- '0.456*255'
+    - 0.5 #- '0.406*255'
+    std:
+    - 1.0 #- '0.229*255'
+    - 1.0 #- '0.224*255'
+    - 1.0 #- '0.225*255'
+optimizer:
+  lr: 0.0001
+  lr_epoch_step: 25 #weight decay step
+  lr_factor: 0.1
+  optimizer_name: 'adam'
+  momentum: 0.9
+  wd: 0.1 #weight decay rate
+  gamma1: 0.99
+  gamma2: 0.0
+train:
+  record_freq: 200
+  begin_epoch: 1
+  end_epoch: 300
+  model_prefix: 'model'
+  resume: false
+  patch_width: 400
+  patch_height: 400
+network: 
+  from_model_zoo: '' #use the pretrain model from pytorch model zoo
+  pretrained: '' #use the pretrain model from assigned file 
+ 
+  input_channel: 3 #network input channels in color feature extracter part 
+  conv_2D_out_channels: 32 #output channels from 2D feature extracter
+  
+  box_range: 1600 #the detect distance(mm) from box center to boundary
+
+  nvox: 32 #the size of the final predict 3d matrix : joint * nvox*nvox*nvox
+  volume_aggregation: 'avg'   
+  pred_joints: 17

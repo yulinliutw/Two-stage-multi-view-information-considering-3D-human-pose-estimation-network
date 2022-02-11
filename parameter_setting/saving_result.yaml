@@ -1,0 +1,40 @@
+pytorch:
+  gpus: '0' #gpu id we select for training  
+  output_path: '' #the path to saving the predict and label
+  block: 'Pose_Net_train' #the main model we use , defined in the .{project_root}/model/main_network/  
+dataset:
+  name: 'human 3.6m'
+  root_dir : ''
+  cam_num:
+  - 1
+  - 2
+  - 3
+  - 4  
+  cam_matrix_path: 'cam_param/cameras.h5'
+  val_image_set: 'test_h36m_multi.csv' #choose the csv tiltle you want to load
+dataiter:    
+    batch_images_per_ctx: 4 # samples in every iter
+    threads: 16
+    use_color_normalize: true
+    mean:
+    - 0.5 #- '0.485*255'
+    - 0.5 #- '0.456*255'
+    - 0.5 #- '0.406*255'
+    std:
+    - 1.0 #- '0.229*255'
+    - 1.0 #- '0.224*255'
+    - 1.0 #- '0.225*255'
+train:
+  patch_width: 400
+  patch_height: 400
+network: 
+  from_model_zoo: 'None' #use the pretrain model from pytorch model zoo
+  pretrained: '' #use the pretrain model from assigned file 
+ 
+  input_channel: 3 #network input channels in color feature extracter part 
+  conv_2D_out_channels: 32 #output channels from 2D feature extracter
+  
+  box_range: 1600 #the detect distance(mm) from box center to boundary
+  nvox: 32 #the size of the project 3d matrix : nvox*nvox*nvox
+  volume_aggregation: 'avg'   
+  pred_joints: 17
