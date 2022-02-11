@@ -1,6 +1,6 @@
 # Two-stage-multi-view-information-considering-3D-human-pose-estimation-network
 ---
-**Code will update later**
+**Code is in the branch 'master'**
 
 We propose a 3D human pose estimation network that **considers the relevance of multi-view information**. By considering the homography, we transform the extracted 2D feature into 3D space. And we explore the **relevance of image feature between different camera views**, so that each view can use other view's information to complement itself, and fuse them to describe the one 3D space. Finally, we propose a two-stage 3D human pose estimation model, to gradually adjust the prediction results. In order to show the effectiveness, we conducted evaluation tests on two widely used data sets. 
 *Keywords—3D human pose estimation, Multi-View Stereo, 3D feature extraction, neural networks, deep learning*
@@ -44,7 +44,7 @@ In my setting, I write the *tc.py* which in folder model/dataloader it can load 
 ```Shell
 python train.py
 ```	
-* Note: the folder fomat,data name fomat should follow -> [link] [link](update later)* 
+* Note: the dataset setting in our work -> [link](update later)* 
 
 ## Evaluation
 ---
@@ -59,6 +59,9 @@ Evaluate the model on two dataset, get the testing data and run the code to savi
 
 * Note: the link of testing data [link](update later)*
 
+## Pre-train model
+[link](update later)
+---
 ## Performance
 ---
-(update later)
+[paper](https://drive.google.com/drive/folders/1fo74BYGvcfeGEgjlLidy4y-t7nNQqp_V?usp=sharing) 
