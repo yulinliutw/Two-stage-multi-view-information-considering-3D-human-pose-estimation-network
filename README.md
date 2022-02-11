@@ -2,8 +2,10 @@
 ---
 **Code is in the branch 'master'**
 
-We propose a 3D human pose estimation network that **considers the relevance of multi-view information**. By considering the homography, we transform the extracted 2D feature into 3D space. And we explore the **relevance of image feature between different camera views**, so that each view can use other view's information to complement itself, and fuse them to describe the one 3D space. Finally, we propose a two-stage 3D human pose estimation model, to gradually adjust the prediction results. In order to show the effectiveness, we conducted evaluation tests on two widely used data sets. 
+We propose a 3D human pose estimation network that **considers the relevance of multi-view information**. By considering the homography, we transform the extracted 2D feature into 3D space. And we explore the **relevance of image feature between different camera views**, so that each view can use other view's information to complement itself, and fuse them to describe the one 3D space. Finally, we propose a two-stage 3D human pose estimation model, to gradually adjust the prediction results. In order to show the effectiveness, we conducted evaluation tests on two widely used data sets.
+
 *Keywords—3D human pose estimation, Multi-View Stereo, 3D feature extraction, neural networks, deep learning*
+
 It is authored by **YU LIN LIU**.
 
 ### Table of Contents
