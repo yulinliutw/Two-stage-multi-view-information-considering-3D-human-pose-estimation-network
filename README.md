@@ -44,7 +44,7 @@ In my setting, I write the *tc.py* which in folder model/dataloader it can load 
 ```Shell
 python train.py
 ```	
-* Note: the dataset setting in our work -> [link](update later)* 
+* Note: to check the dataset setting in our work, please mail me.
 
 ## Evaluation
 ---
@@ -57,11 +57,11 @@ Evaluate the model on two dataset, get the testing data and run the code to savi
   - for Human3.6M, run *eval.py*
   - for TotalCapture, run *eval_tc.py*
 
-* Note: the link of testing data [link](update later)*
+* Note: to check the testing data, please mail me.
 
 ## Pre-train model
-[link](update later)
----
+- [link](https://drive.google.com/file/d/1lOnKQUoZnVpUd1FNzR3vw1FYlH9YqUHW/view?usp=sharing)
+
 ## Performance
 ---
-[paper](https://drive.google.com/drive/folders/1fo74BYGvcfeGEgjlLidy4y-t7nNQqp_V?usp=sharing) 
+- [paper](https://drive.google.com/drive/folders/1fo74BYGvcfeGEgjlLidy4y-t7nNQqp_V?usp=sharing) 
